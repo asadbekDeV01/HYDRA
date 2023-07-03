@@ -1,0 +1,10 @@
+import Vector15 from "./Vector15.png";
+import Vector16 from "./Vector 16.png";
+import Vector20 from "./Vector 20.svg";
+import Vector19 from "./Vector 19.png";
+import Vector18 from "./Vector 18.png";
+import Vector17 from "./Vector 17.png";
+import Right from "./right.svg";
+import menu from "./Hamburger-Button.svg";
+import close from "./Hamburger-Button.svg";
+export { Vector15, Right, Vector16, Vector20, Vector18, Vector19,Vector17,menu,close };
