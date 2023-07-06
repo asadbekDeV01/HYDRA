@@ -7,11 +7,11 @@ function Location() {
       <div className="flex items-center space-x-8">
         <img
           src={LocationIcon}
-          className="text-[#C0B7E8] shrink-0 w-[70px] h-[70px] animate-pulse hover:cursor-pointer"
+          className="text-[#C0B7E8] shrink-0 w-[70px] h-[70px] animate-pulse  hover:cursor-pointer"
           alt="Location icon"
         />
         <div className="space-y-[10px]">
-          <h1 className="font-primaryfont text-white text-[24px]">
+          <h1 className="font-primaryfont text-white text-[24px] ">
             Pay Us a Visit
           </h1>
           <p className="text-[14px]  font-medium text-white">
@@ -24,7 +24,7 @@ function Location() {
         <img
           src={PhoneCall}
           alt="Phone icon"
-          className="text-[#C0B7E8] shrink-0 w-[70px] cursor-pointer h-[70px] animate-pulse"
+          className="text-[#C0B7E8]  shrink-0 w-[70px] cursor-pointer h-[70px] animate-pulse"
         />
 
         <div className="space-y-[10px]">
@@ -39,7 +39,7 @@ function Location() {
         <img
           src={MailIcon}
           alt="mail icon"
-          className="text-[#C0B7E8] shrink-0 w-[70px] h-[70px] animate-pulse"
+          className="text-[#C0B7E8]  shrink-0 w-[70px] h-[70px] animate-pulse"
         />
         <div className="space-y-[10px]">
           <h1 className="font-primaryfont text-white text-[24px]">

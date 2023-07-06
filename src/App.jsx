@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   CardsImg1,
   CardsImg2,
@@ -13,7 +14,6 @@ import {
 import {
   About,
   Cards,
-  Footer,
   Hero,
   HeroRight,
   Hydratech,
@@ -26,9 +26,8 @@ import {
 } from "./components";
 import Form from "./components/Form";
 import Layout from "./components/Layout";
-import Navbar from "./components/Navbar";
 import "./components/index.css";
-import { Right, Vector15, Vector18, Vector19 } from "./vector";
+import { Vector15, Vector18, Vector19 } from "./vector";
 
 function App(props) {
   // const [loading, setLoading] = useState(false);
@@ -38,6 +37,9 @@ function App(props) {
   //     setLoading(false);
   //   }, 2000);
   // }, []);
+  const [bgColor, setbgColor] = useState('none');
+ 
+  
   return (
     <Layout>
       <div className="w-full overflow-hidden max-sm:grid max-sm:grid-cols-1">
@@ -48,22 +50,25 @@ function App(props) {
           </div>
 
           <HeroRight />
-          <div className=" hidden max-sm:hidden">
+          <div className=" lg:hidden ">
             <Hero />
           </div>
         </div>
         {/* HERO FINISHED  */}
 
         {/* LOCATION SECTION  */}
-        <section className=" flex justify-center mt-[157px]  items-center mx-[84px] hover:transition-all hover:ease-out transition duration-300 cursor-pointer hover:scale-110 hover:-translate-1 ">
-          <div id="LocationSection" className="py-4 px-6">
+        <section className=" flex justify-center mt-[157px]  items-center mx-[84px] hover:transition-all hover:ease-out transition hover:duration-300 cursor-pointer hover:scale-110 hover:-translate-y-2  ">
+          <div
+            id="LocationSection"
+            className="py-4 px-6 hover:shadow-md hover:shadow-slate-100"
+          >
             <Location />
           </div>
         </section>
         {/* LOCATION SECTION FINISHED  */}
 
         {/*     Introduction section */}
-        <section className="mx-[84px] mt-[194px] ">
+        <section className="mx-[84px] mt-[194px]  max-sm:mx-[20px]">
           <Introduction h1text={"INTRODUCTION"} h2text={"TO HYDRA VR"} />
         </section>
         {/* Introduction section finished */}
@@ -99,35 +104,42 @@ function App(props) {
         </div>
         {/* card section finished */}
 
-        <section
-          className=" mx-[84px] relative rounded-full p-4 space-y-8 mb-3 "
-          id="technobg"
-        >
-          <Technologies />
-        </section>
-        <div className="absolute  top-[405%] left-[48%] ">
-          <a
-            href="#hydratechlink"
-          >
-            <div id="shadow" className="p-4">
-              <div id="smalldowndv" className="flex items-center ">
-                <img src={smalldown} alt="small right" />
+        <section className=" mx-[84px] relative  p-4 max-sm:p-2 space-y-8 mb-3 max-sm:mx-0px max-sm:space-y-1 max-sm:flex">
+          <div className="-space-y-8 max-sm:-space-y-0">
+            <Technologies />
+
+            <a
+              href="#hydratechlink"
+              className="flex justify-center fill-black "
+            >
+              <div
+                id="shadow"
+                className="p-4 max-sm:hidden hover:duration-300 hover:transition hover:ease-in hover:shadow-md hover:shadow-slate-100"
+              >
+                <div onClick={( ) => setbgColor("#401275")} id="smalldowndv" className="hover:scale-125 ">
+                  <img src={smalldown} alt="small down" />
+                </div>
               </div>
-            </div>
-          </a>
-          
-        </div>
+            </a>
+          </div>
+
+          <div
+            id="hydratechlink"
+            style={{ backgroundColor: bgColor}}
+            className="flex justify-between mx-[84px] items-center mt-[6%] rounded-full px-10 opacity- "
+          >
+            <Hydratech
+              image={HYDRAtech1}
+              link={"https://www.unrealengine.com"}
+            />
+            <Hydratech image={HYDRAtech3} link={"https://www.unity.com"} />
+            <Hydratech image={HYDRAtech2} link={"https://www.uculus.com"} />
+            <Hydratech image={HYDRAtech4} link={"https://www.vive.com"} />
+          </div>
+        </section>
 
         {/* hydra tech  */}
-        <section
-          id="hydratechlink"
-          className="flex justify-between mx-[84px] items-center mt-[4%] hover:opacity-100 opacity-95 hover:bg-[#353557] hover:rounded-full hover:px-2 hover:animate-none transition-all hover:shadow-lg hover:shadow-slate-200"
-        >
-          <Hydratech image={HYDRAtech1} />
-          <Hydratech image={HYDRAtech3} />
-          <Hydratech image={HYDRAtech2} />
-          <Hydratech image={HYDRAtech4} />
-        </section>
+
         {/* Hydratech finished */}
 
         <section id="how to" className="mx-[84px] mt-[5%] ">
@@ -159,7 +171,7 @@ function App(props) {
         {/* form  */}
         <section
           id="form"
-          className="form mx-[84px] flex justify-center items-center mt-[3%] relative "
+          className="form mx-[84px] flex justify-center items-center mt-[3%] relative max-sm:mx-[20px]"
         >
           <Form />
         </section>

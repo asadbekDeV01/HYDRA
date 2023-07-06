@@ -6,5 +6,5 @@ import Vector18 from "./Vector 18.png";
 import Vector17 from "./Vector 17.png";
 import Right from "./right.svg";
 import menu from "./Hamburger-Button.svg";
-import close from "./Hamburger-Button.svg";
+import close from "./close.svg";
 export { Vector15, Right, Vector16, Vector20, Vector18, Vector19,Vector17,menu,close };

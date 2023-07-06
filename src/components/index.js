@@ -11,6 +11,7 @@ import Technologies from "./Technologies";
 import Numbers from "./Numbers";
 import NumberInfo from "./NumberInfo";
 import Footer from "./Footer";
+import { HYDRAtech1 } from "../assets";
 
 export {
   Hero,

@@ -125,6 +125,11 @@ li {
   border-radius: 159px;
   background: linear-gradient(251deg, #c0b7e8 0%, #8176af 100%);
 }
+#number:hover {
+  background: none;
+  background-color: #ffd700;
+}
+
 #numbershadow {
   border-radius: 198px;
   background: rgba(13, 13, 13, 0.32);
@@ -134,4 +139,11 @@ li {
   border-radius: 100px;
   background: radial-gradient(50% 50% at 50% 50%, #403a5f 0%, #211e2e 100%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#heromobile {
+  background-image: url("../assets/pexels-michelangelo-buonarroti-8728382\ 1.svg");
+  flex-shrink: 0;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px,10px,10px,20px;
 }

@@ -32,7 +32,7 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-primaryfont font-normal cursor-pointer text-[16px] ${
+            className={`font-primaryfont font-normal cursor-pointer text-[16px] hover:border-b-2 hover:border-slate-100/95 hover:-translate-y-2 hover:scale-105 hover:transition hover:duration-150 ${
               active === nav.title ? "text-white" : "text-white"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="max-sm:hidden">
         <NavbarBorderbtn />
       </div>
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden flex flex-1 justify-end items-center relative">
         <img
           src={toggle ? close : menu}
           alt="menu"
@@ -55,13 +55,13 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-primary shadow-xl  absolute   top-20 right-0 mx-4 my-2 min-w-[140px] rounded-3xl sidebar`}
+          } p-10 bg-primary shadow-lg  absolute   top-20 right-0 mx-4 my-2 min-w-[300px] rounded-3xl sidebar shadow-slate-100 `}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                className={`font-poppins font-medium cursor-pointer text-[20px] hover:scale-110 hover:-translate-y-2 ${
                   active === nav.title ? "text-white" : "text-dimWhite"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
