@@ -30,12 +30,12 @@ function HeroRight() {
         />
         {/* Vector line /\ */}
         <img
-          className="mr-2 max-sm:mr-0 relative max-sm:w-[360px] max-sm:p-0 max-sm: max-sm:hidden "
+          className="mr-2 max-sm:mr-0 relative max-sm:w-[360px] max-sm:p-0  max-sm:hidden "
           src={HeroImage}
           alt="vfsafv"
         />
       </div>
-      <div className="lg:hidden  max-sm:p-1 max-sm:w-full h-full relative">
+      <div className="lg:hidden   max-sm:p-1 max-sm:w-full h-full static">
         <img
           className="mr-2 max-sm:mr-0  max-sm:w-[360px] max-sm:p-0   "
           src={HeroImage}
@@ -55,9 +55,9 @@ function HeroRight() {
           transition={{
             duration: 2,
           }}
-          className="pl-[84px] space-y-10 flex justify-center items-center flex-col "
+          className="pl-[84px] space-y-10 flex justify-center flex-1 items-center flex-col max-sm:pl-[1px] "
         >
-          <div>
+          <div className="flex  justify-start items-center">
             <h1 className="text-[36px] font-primaryfont  text-white  ">
               <span className=" font-primaryfont bg-clip-text text-transparent bg-gradient-to-r  from-[#C0B7E8] to-[#8176AF]">
                 Dive
@@ -72,7 +72,7 @@ function HeroRight() {
               </span>
             </h1>
           </div>
-          
+
           <div className="flex justify-center items-center relative ">
             <button className=" hover:shadow-md hover:shadow-slate-50 hover:scale-105 hover:duration-150 hover:ease-in-out hover:transition-all hover:-translate-y-2 hover:delay-100 static transition-all font-primaryfont duration-500  hover:bg-gradient-to-rl hover:text-white hover:to-[#8176AF]  hover:from-[#343045] bg-size-200 hover:bg-right-bottom    text-xs font-bold rounded-full px-12 py-4 text-[#343045]  bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">
               BUILD YOUR WORLD

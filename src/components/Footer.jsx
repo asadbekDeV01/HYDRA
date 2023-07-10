@@ -12,7 +12,7 @@ import "./index.css";
 
 function Footer() {
   return (
-    <footer className=" mb-1">
+    <footer className="max-sm:space-y-2 mb-1 max-sm:flex max-sm:flex-col max-sm:justify-start max-sm:items-center">
       <div className="flex justify-around items-center relative max-sm:flex max-sm:justify-start max-sm:items-center max-sm:flex-col">
         <a href="/">
           <img
@@ -44,7 +44,7 @@ function Footer() {
         </div>
 
         <div className="grid grid-cols-2 max-sm:hidden">
-          <img src={Vector20} alt="VECTORRR" />
+          <img src={Vector20} alt="VECTORRR" className="max-sm:hidden" />
           <ul className="text-[16px] text-white font-primaryfont space-y-5">
             <li className=" hover:border-slate-100/95 hover:-translate-y-2 hover:scale-105 hover:transition hover:duration-150">
               <a href="#">F.A.Q</a>
@@ -66,7 +66,7 @@ function Footer() {
           <h1 className="text-[16px] text-white font-primaryfont font-bold">
             SOCIALIZE WITH HYDRA
           </h1>
-          <div className="flex justify-around items-start space-x-4 ">
+          <div className="flex justify-around items-start space-x-4 max-sm:space-x-2">
             <a
               href="https://www.facebook.com/"
               className="hover:-translate-y-2 hover:transition hover:duration-150 hover:shadow-md hover:shadow-slate-50 hover:scale-150 hover:rounded-full"
@@ -112,10 +112,11 @@ function Footer() {
           </button>
         </div>
       </div>
-      <div className="mt-[10%] mb-[5%] flex justify-center items-center flex-col space-y-11 ">
+      <div className="mt-[10%] mb-[5%] flex justify-start items-center flex-col space-y-11 max-sm:space-y-2 max-sm:mt-[2%] max-sm:mb-[2%]">
         <img src={Vector17} alt="vectooor" />
-        <h1 className="text-[14px] text-white font-primaryfont tracking-wide max-sm:items-center max-sm:space-y-4 max-sm:leading-loose ">
-          2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED{" "}
+        <h1 className="text-[14px] text-white font-primaryfont tracking-wide max-sm:items-center max-sm:space-y-4 max-sm:leading-loose max-sm:flex max-sm:flex-col max-sm:justify-center ">
+          2023 © HYDRA LANDING PAGE <span className="max-sm:hidden"> - </span>{" "}<br className="lg:hidden"/>
+          BY ZINE. E. FALOUTI <span className="max-sm:hidden">-</span> <br className="lg:hidden"/> ALL RIGHTS RESERVED{" "}
         </h1>
       </div>
     </footer>

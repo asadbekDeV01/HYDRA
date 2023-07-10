@@ -1,8 +1,11 @@
 import "./index.css";
 function Technologies() {
   return (
-    <div id="technobg" className="py-14 rounded-full  max-sm:py-8">
-      <div className="flex  justify-center items-center  flex-col shrink-0 py-10 max-sm:py-4">
+    <div
+      id="technobg"
+      className="py-14 rounded-full  max-sm:py-14 max-sm:rounded-[60px] max-sm:bg-cover"
+    >
+      <div className="flex  justify-center items-center  flex-col shrink-0 py-10 max-sm:py-0">
         <h1 className="text-[36px] max-sm:text-[16px] font-primaryfont text-white">
           TECHNOLOGIES & HARDWARE
         </h1>
@@ -10,7 +13,6 @@ function Technologies() {
           USED BY HYDRA VR.
         </h2>
       </div>
-     
     </div>
   );
 }

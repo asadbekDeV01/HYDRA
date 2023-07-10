@@ -29,6 +29,8 @@ import Layout from "./components/Layout";
 import "./components/index.css";
 import { Vector15, Vector18, Vector19 } from "./vector";
 
+import Carousel from "./components/Carousel";
+
 function App(props) {
   // const [loading, setLoading] = useState(false);
   // useEffect(() => {
@@ -37,9 +39,8 @@ function App(props) {
   //     setLoading(false);
   //   }, 2000);
   // }, []);
-  const [bgColor, setbgColor] = useState('none');
- 
-  
+  const [bgColor, setbgColor] = useState("none");
+
   return (
     <Layout>
       <div className="w-full overflow-hidden max-sm:grid max-sm:grid-cols-1">
@@ -57,7 +58,7 @@ function App(props) {
         {/* HERO FINISHED  */}
 
         {/* LOCATION SECTION  */}
-        <section className=" flex justify-center mt-[157px]  items-center mx-[84px] hover:transition-all hover:ease-out transition hover:duration-300 cursor-pointer hover:scale-110 hover:-translate-y-2  ">
+        <section className=" flex justify-center mt-[157px] max-sm:mt-[80px] max-sm:mx-[20px]  items-center mx-[84px] hover:transition-all hover:ease-out transition hover:duration-300 cursor-pointer hover:scale-110 hover:-translate-y-2 max-sm:w-[347px] h-[109px]  ">
           <div
             id="LocationSection"
             className="py-4 px-6 hover:shadow-md hover:shadow-slate-100"
@@ -91,11 +92,11 @@ function App(props) {
           <img
             src={Vector14}
             alt="vector 14"
-            className="absolute top-[300%] "
+            className="absolute top-[300%] max-sm:hidden "
           />
         </div>
         <div id="services" className="relative">
-          <section className=" flex justify-between mx-[84px] space-x-3 mt-[5%] mb-36">
+          <section className=" flex justify-between mx-[84px] space-x-3 mt-[5%] mb-36 max-sm:mb-6">
             <Cards img={CardsImg1} name={"SIMULATION"} />
             <Cards img={CardsImg2} name={"EDUCATION"} />
             <Cards img={CardsImg3} name={"SELF-CARE"} />
@@ -104,8 +105,8 @@ function App(props) {
         </div>
         {/* card section finished */}
 
-        <section className=" mx-[84px] relative  p-4 max-sm:p-2 space-y-8 mb-3 max-sm:mx-0px max-sm:space-y-1 max-sm:flex">
-          <div className="-space-y-8 max-sm:-space-y-0">
+        <section className="mx-[84px] relative  p-4 max-sm:p-2 space-y-8 mb-3 max-sm:mx-4 max-sm:space-y-4 max-sm:flex max-sm:flex-col max-sm:justify-start">
+          <div className="-space-y-8 max-sm:space-y-0">
             <Technologies />
 
             <a
@@ -116,7 +117,11 @@ function App(props) {
                 id="shadow"
                 className="p-4 max-sm:hidden hover:duration-300 hover:transition hover:ease-in hover:shadow-md hover:shadow-slate-100"
               >
-                <div onClick={( ) => setbgColor("#401275")} id="smalldowndv" className="hover:scale-125 ">
+                <div
+                  onClick={() => setbgColor("#401275")}
+                  id="smalldowndv"
+                  className="hover:scale-125 "
+                >
                   <img src={smalldown} alt="small down" />
                 </div>
               </div>
@@ -125,8 +130,8 @@ function App(props) {
 
           <div
             id="hydratechlink"
-            style={{ backgroundColor: bgColor}}
-            className="flex justify-between mx-[84px] items-center mt-[6%] rounded-full px-10 opacity- "
+            style={{ backgroundColor: bgColor }}
+            className="max-sm:hidden flex justify-between mx-[84px] items-center mt-[6%] rounded-full px-10 opacity- "
           >
             <Hydratech
               image={HYDRAtech1}
@@ -137,10 +142,9 @@ function App(props) {
             <Hydratech image={HYDRAtech4} link={"https://www.vive.com"} />
           </div>
         </section>
-
-        {/* hydra tech  */}
-
-        {/* Hydratech finished */}
+        <div className="lg:hidden">
+        <Carousel />
+        </div>
 
         <section id="how to" className="mx-[84px] mt-[5%] ">
           <Introductiontwo />
@@ -164,14 +168,14 @@ function App(props) {
           <NumberInfo NumberInfotext={"Hydra VR"} infotext2={"Deploy"} />
         </section>
         {/* Numbers section finished  */}
-        <div className="absolute top-[657%] -space-y-16">
+        <div className="absolute top-[657%] -space-y-16 max-sm:hidden">
           <img src={Vector19} alt="vectoooor" className="m-0 p-0 " />
           <img src={Vector18} alt="vectoooor" className="m-0 p-0" />
         </div>
         {/* form  */}
         <section
           id="form"
-          className="form mx-[84px] flex justify-center items-center mt-[3%] relative max-sm:mx-[20px]"
+          className="  mx-[84px] flex justify-center items-center mt-[3%] relative max-sm:mx-[15px]"
         >
           <Form />
         </section>
